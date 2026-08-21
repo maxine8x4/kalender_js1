@@ -47,6 +47,7 @@ td {
     text-align: center;
     padding: 20px;
     font-size: 1.6rem;
+    position: relative;
 
 }
 
@@ -65,7 +66,6 @@ td {
 
 td:hover {
     background-color:rgb(168, 104, 165);
-    text-decoration: underline;
 }
 
 table {
@@ -103,4 +103,13 @@ li {
 li::before {
     content: "•";
     margin-right: 20px;
+}
+
+.glass {
+    background: linear-gradient(135deg, rgb(173, 68, 117), rgb(173, 68, 117));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(50px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
