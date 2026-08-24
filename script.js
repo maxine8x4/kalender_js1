@@ -28,40 +28,9 @@ tage.forEach(function(tag) {
     }
 });
 
-let wochentage = [      
-    "Sonntag",
-    "Montag",
-    "Dienstag",
-    "Mittwoch",
-    "Donnerstag",
-    "Freitag",
-    "Samstag"
-];
-
-let monate = [      
-    "Januar",
-    "Februar",
-    "März",
-    "April",
-    "Mai",
-    "Juni",
-    "Juli",
-    "August",
-    "September",
-    "Oktober",
-    "November",
-    "Dezember"
-];
-
-let nummern = [     
-    "",
-    "erste",
-    "zweite",
-    "dritte",
-    "vierte",
-    "fünfte"
-];
-
+const wochentage = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
+const monate = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+const nummern = ['', 'erste', 'zweite', 'dritte', 'vierte', 'fünfte'];
 
 const day = datum.getDate();      
 const month = datum.getMonth() +1 ;         
@@ -121,9 +90,15 @@ const verbleibendeTage = Math.ceil(unterschiedEnde / (1000 * 60 * 60 * 24));    
 const text = "Es ist der " + nummern[wievielterWochentag] + " " + wochentagsname + " im Monat.";       // Erstellung des Textes, der den Wochentag im Monat beschreibt
 
 
+// Berechnung passender Wochentage
+const ersterTag = new Date(jahr, monate, 1);
+const Tabellenfeld = (ersterTag.getDay() + 6) % 7; 
+
+const tage = document.querySelectorAll("tbody td");
+
+
 
 // Gesetzliche Feiertage in Deutschland
-
 let neujahr = day === 1 && month === 1;               
 let tagDerDeutschenEinheit = day === 3 && month === 10;     
 let ersterWeihnachtsfeiertag = day === 25 && month === 12;   
