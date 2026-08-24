@@ -1,5 +1,11 @@
 const datum = new Date();     
 
+document.title = "Kalenderblatt vom " + datum.toLocaleDateString("de-DE", { day: "2-digit",
+        day: "2-digit",
+        month: "long",
+        year: "numeric"
+});
+
 const datumText = datum.toLocaleDateString("de-DE", {         
     day: "2-digit",
     month: "long",
@@ -14,7 +20,13 @@ let wochentagsname = datum.toLocaleDateString("de-DE", {
     weekday: "long"    
 })
 
+const tage = document.querySelectorAll("td");
 
+tage.forEach(function(tag) {
+    if (tag.textContent == datum.getDate()) {
+        tag.classList.add("heute");
+    }
+});
 
 let wochentage = [      
     "Sonntag",
@@ -141,3 +153,4 @@ document.getElementById("info1").textContent = "Der " + day + ". " + monatsName 
 document.getElementById("info2").textContent = "Es handelt sich um den " + tagImJahr + ". Tag des Jahres " + year + ", was bedeutet, dass es noch " + verbleibendeTage + " Tage bis zum Jahresende sind.";
 document.getElementById("info4").textContent = "Der Monat " + monatsName + " hat insgesamt 31 Tage";
 document.getElementById("aktuellerMonat").textContent = monatsName;
+document.getElementById("h3").textContent = "Historische Ereignisse am " + day + "." + monatsName;

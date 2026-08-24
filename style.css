@@ -34,10 +34,17 @@ body    {
 
 .samstag {
     color: blue;
+    font-weight: bold;
 }
 
 .sonntag {
     color: red;
+    font-weight: bold;
+}
+
+.heute {
+    font-weight: bold;
+    box-shadow: 0 0 20px #ff69b4;
 }
 
 td {
@@ -72,6 +79,18 @@ table {
     width: 100%;
     margin-top: 80px;
     margin-bottom: 80px;
+    animation: erscheinen 0.8s;
+}
+
+@keyframes erscheinen {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 th {
