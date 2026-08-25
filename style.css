@@ -8,13 +8,12 @@ h1 {
     text-shadow:
         0 0 5px #ff2a8a,
         0 0 15px #ff2a8a;
-    font-size: 300%;
+    font-size: 400%;
     font-family: arial, sans-serif;
 }
 
 h2 {
     color: #00f0ff;
-    text-align: center;
     font-size: 40px;
     font-family: "Rajdhani", sans-serif;
     font-weight: 700;
@@ -31,9 +30,9 @@ body    {
     background-color: #080b10;
     color: #e8e8e8;
     margin-top: 120px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px;
+    margin-left: 100px;
+    margin-right: 20px;
+    max-width: none;
     font-family: "Rajdhani", sans-serif;
 }
 
@@ -79,7 +78,7 @@ td {
     margin-left: auto;
     margin-right: auto;
     max-width: 800px;
-    border: 2px solid rgb(49, 25, 48);
+    border: 3px solid rgb(49, 25, 48);
     border-radius: 90px;
     box-shadow: 0 20px 10px rgba(0, 0, 0, 0.2);
 }
@@ -116,18 +115,39 @@ th {
     font-size: 160%;
 }
 
+.hauptbereich {
+    display: flex;
+    align-items: flex-start;
+    gap: 200px;
+}
+
 p {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 250px;
+
+    margin-left: 20;
+    margin-right: 0;
+}
+
+p span {
+     font-size: 140%;
     background-color: #0d1218;
     border-left: 3px solid #ff2a8a;
     border-top: 1px solid #303944;
     padding: 20px;
-}
+    background-color: #0d1218;
+    border: 1px solid #303944;
+    border-top: 3px solid #00f0ff;
+    padding: 15px;
+}   
 
 p::before {
     content: "SYSTEM // DATE_INFO";
     display: block;
     color: #00f0ff;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: 10px;
