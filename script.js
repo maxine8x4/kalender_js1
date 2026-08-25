@@ -18,15 +18,22 @@ let monatsName = datum.toLocaleDateString("de-DE", {
 
 let wochentagsname = datum.toLocaleDateString("de-DE", {
     weekday: "long"    
-})
+});
 
-const tage = document.querySelectorAll("td");
 
+const tage = document.querySelectorAll("tbody td");
 tage.forEach(function(tag) {
     if (tag.textContent == datum.getDate()) {
         tag.classList.add("heute");
     }
 });
+/*
+tage.forEach(function(tag) {
+    if (tag.textContent == datum.getDate()) {
+        tag.classList.add("heute");
+    }
+});
+*/
 
 const wochentage = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
 const monate = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
@@ -46,7 +53,7 @@ let anzahlTageImMonat = tageImMonat[datum.getMonth()];
         }
 
 
-// Berechnung wieviele Tage im Jahr
+// Berechnung Schaltjahr
 function istSchaltjahr(jahr) {
         if (jahr % 400 == 0) {
                 return true;
@@ -90,11 +97,11 @@ const verbleibendeTage = Math.ceil(unterschiedEnde / (1000 * 60 * 60 * 24));    
 const text = "Es ist der " + nummern[wievielterWochentag] + " " + wochentagsname + " im Monat.";       // Erstellung des Textes, der den Wochentag im Monat beschreibt
 
 
-// Berechnung passender Wochentage
-const ersterTag = new Date(jahr, monate, 1);
-const Tabellenfeld = (ersterTag.getDay() + 6) % 7; 
-
-const tage = document.querySelectorAll("tbody td");
+/*// Berechnung passender Wochentage
+const ersterTag = newDate(year, month - 1, 1);     // Erster Tag des Monats
+/*
+const letzterTag = new Date(year, month, 0);        // Letzter Tag des Monats
+*/
 
 
 

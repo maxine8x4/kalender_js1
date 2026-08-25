@@ -1,55 +1,68 @@
+@import url('http://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+
 h1 {
     text-align: center;
-    text-shadow: 4px 2px 2px black;
-    color: rgb(173, 68, 117);
-    font-size: 400%;
-    font-family: cursive;
+    color: #ff2a8a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow:
+        0 0 5px #ff2a8a,
+        0 0 15px #ff2a8a;
+    font-size: 300%;
+    font-family: arial, sans-serif;
 }
 
 h2 {
-    color: rgb(173, 68, 117);
+    color: #00f0ff;
     text-align: center;
-    font-size: 200%;
-    font-family: cursive;
+    font-size: 40px;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 700;
 }   
 
 h3 {
-    color: rgb(228, 183, 226);
+    color: #ff2a8a;
     text-align: center;
     font-size: 200%;
-    font-family: cursive;
+    font-family: "Rajdhani", sans-serif;
 }
 
 body    {
-    background-color: rgb(233, 186, 208);
+    background-color: #080b10;
+    color: #e8e8e8;
     margin-top: 120px;
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
-}
-
-#heute {
-    background-color: rgb(173, 68, 117);
-}
-
-.samstag {
-    color: blue;
-    font-weight: bold;
-}
-
-.sonntag {
-    color: red;
-    font-weight: bold;
+    font-family: "Rajdhani", sans-serif;
 }
 
 .heute {
     font-weight: bold;
-    box-shadow: 0 0 20px #ff69b4;
+    border: 2px solid #ff2a8a;
+    box-shadow:inset
+        0 0 5px #ff2a8a,
+        0 0 12px #ff2a8a;
+    /*
+    background-color: rgb(173, 68, 117);
+    */
 }
 
+.samstag {
+    color: #00f0ff;
+    font-weight: bold;
+}
+
+.sonntag {
+    color: #ff2a8a;
+    font-weight: bold;
+}
+
+
 td {
-    background-color: rgb(228, 183, 226);
-    border: 2px solid black;
+    background-color: #10151c;
+    color: #e8e8e8;
+    border: 2px solid #303944;
     border-radius: 10px;
     text-align: center;
     padding: 20px;
@@ -59,7 +72,7 @@ td {
 }
 
 .grid-item {
-    background-color: rgb(173, 68, 117);
+    background-color:  #10151c;
     padding: 10px;
     margin-top: 40px;
     margin-bottom: 60px;
@@ -72,7 +85,10 @@ td {
 }
 
 td:hover {
-    background-color:rgb(168, 104, 165);
+    background-color: #17232c;
+    color: #00f0ff;
+    box-shadow: inset 0 0 10px #00f0ff;
+    cursor: pointer;
 }
 
 table {
@@ -94,17 +110,27 @@ table {
 }
 
 th {
+    color: #e8e8e8;
+    border-bottom: 2px solid #00f0ff;
     width: 14.28%;
     font-size: 160%;
 }
 
 p {
-    text-align: center;
-    font-family: cursive;
-    font-size: 150%;
-    margin-top: 80px;
-    margin-bottom: 80px;
-    
+    background-color: #0d1218;
+    border-left: 3px solid #ff2a8a;
+    border-top: 1px solid #303944;
+    padding: 20px;
+}
+
+p::before {
+    content: "SYSTEM // DATE_INFO";
+    display: block;
+    color: #00f0ff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
 ul {
@@ -122,13 +148,4 @@ li {
 li::before {
     content: "•";
     margin-right: 20px;
-}
-
-.glass {
-    background: linear-gradient(135deg, rgb(173, 68, 117), rgb(173, 68, 117));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(50px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
